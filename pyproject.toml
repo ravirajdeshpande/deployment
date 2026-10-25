@@ -1,3 +1,19 @@
+[project]
+name = "humanizer-agent"
+version = "0.3.0"
+# Vercel installs from this table, not requirements.txt, whenever pyproject.toml exists.
+# Keep it identical to requirements.txt; tests/unit/test_packaging.py enforces that.
+dependencies = [
+  "fastapi==0.141.1",
+  "langchain-core==1.6.1",
+  "langchain-openai==1.6.0",
+  "langgraph==1.2.11",
+  "pydantic==2.13.5",
+  "pydantic-settings==2.15.0",
+  "uvicorn==0.52.4",
+  "langsmith==0.14.3",
+]
+
 [tool.pytest.ini_options]
 addopts = "-ra --strict-config --strict-markers"
 testpaths = ["tests"]
